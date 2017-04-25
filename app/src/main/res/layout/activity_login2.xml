@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/side_nav_barr"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:weightSum="1">
+
+    <TextView
+        android:text="Login Crud"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="Email"
+            android:id="@+id/email"
+            android:drawableRight="@drawable/ic_email"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/input_login"
+            android:textColorHint="#ffffff"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="Password"
+            android:id="@+id/password"
+            android:drawableRight="@drawable/ic_key"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:text="Login"
+        android:background="#5a33a8ae"
+        android:textColor="@color/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnLinkToRegisterScreen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:background="@null"
+        android:text="@string/btn_link_to_register"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <ProgressBar
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:id="@+id/progress"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+</LinearLayout>

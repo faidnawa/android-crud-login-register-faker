@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#49ae66</color>
+    <color name="colorPrimaryDark">#41a353</color>
+    <color name="colorAccent">#d8d8d8</color>
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="bg_login">#4cae50</color>
+    <color name="bg_register">#4cae50</color>
+    <color name="bg_main">#428bca</color>
+    <color name="white">#ffffff</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#eceeec</color>
+    <color name="input_register_bg">#388d3c</color>
+    <color name="input_register_hint">#dbdee1</color>
+    <color name="btn_login">#ebedeb</color>
+    <color name="btn_login_bg">#319235</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+
+</resources>

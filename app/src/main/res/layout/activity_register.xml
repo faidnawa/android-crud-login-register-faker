@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/side_nav_barr"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:weightSum="1">
+
+    <TextView
+        android:text="Crud Register"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="Name"
+            android:id="@+id/name"
+            android:drawableRight="@drawable/ic_person"
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_email"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="Password"
+            android:id="@+id/password"
+            android:drawableRight="@drawable/ic_key"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5a33a8ae"
+        android:text="@string/btn_register"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/btnLinkToLoginScreen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:background="@null"
+        android:text="@string/btn_link_to_login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <ProgressBar
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:id="@+id/progress"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+</LinearLayout>
