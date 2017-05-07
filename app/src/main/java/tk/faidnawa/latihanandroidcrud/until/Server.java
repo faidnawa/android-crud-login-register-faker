@@ -6,5 +6,5 @@ package tk.faidnawa.latihanandroidcrud.until;
 
 public class Server {
     // sesuaikan dengan IP Address PC/laptop atau ip server
-    public static final String URL = "https://crud-faidnawa.c9users.io/";
+    public static final String URL = "http://latihanandroid2.000webhostapp.com/";
 }
