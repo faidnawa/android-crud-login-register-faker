@@ -7,7 +7,8 @@
         <item
             android:id="@+id/nav_Logout"
 
-            android:title="Lggout" />
+            android:title="Log out"
+            android:icon="@drawable/logout"/>
 
     </group>
 
