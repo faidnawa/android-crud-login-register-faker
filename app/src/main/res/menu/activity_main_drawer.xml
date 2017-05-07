@@ -5,15 +5,15 @@
 
         <item
             android:id="@+id/nav_login"
-
+            android:icon="@drawable/login"
             android:title="login" />
         <item
             android:id="@+id/nav_register"
-
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
             android:title="register" />
         <item
             android:id="@+id/exit_app"
-
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="Exit" />
 
 
