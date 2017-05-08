@@ -27,12 +27,11 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $response["user"]["name"] = $user["name"];
         $response["user"]["email"] = $user["email"];
         $response["user"]["created_at"] = $user["created_at"];
-        $response["user"]["updated_at"] = $user["updated_at"];
         echo json_encode($response);
     } else {
         // user is not found with the credentials
         $response["error"] = TRUE;
-        $response["error_msg"] = "Login gagal. Coba Lagi!";
+        $response["error_msg"] = "Login gagal. Coba Lagi! , coba cek email anda untuk aktifasi";
         echo json_encode($response);
     }
 } else {
