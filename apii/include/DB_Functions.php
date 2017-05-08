@@ -21,14 +21,13 @@ class DB_Functions {
      * Storing new user
      * returns user details
      */
-    public function storeUser($name, $email, $password) {
-        $uuid = uniqid('', true);
+    public function storeUser($name, $email, $password, $uuid, $code) {
         $hash = $this->hashSSHA($password);
         $encrypted_password = $hash["encrypted"]; // encrypted password
-        $salt = $hash["salt"]; // salt
-
-        $stmt = $this->conn->prepare("INSERT INTO users(unique_id, name, email, encrypted_password, salt, created_at) VALUES(?, ?, ?, ?, ?, NOW())");
-        $stmt->bind_param("sssss", $uuid, $name, $email, $encrypted_password, $salt);
+		//$code = $hash["salt"]; // salt
+		$salt = $hash["salt"]; // salt
+        $stmt = $this->conn->prepare("INSERT INTO users(unique_id, name, email, encrypted_password, salt, token, created_at) VALUES(?, ?, ?, ?, ?, ?, NOW())");
+        $stmt->bind_param("ssssss", $uuid, $name, $email, $encrypted_password, $salt, $code);
         $result = $stmt->execute();
         $stmt->close();
 
@@ -45,6 +44,8 @@ class DB_Functions {
             return false;
         }
     }
+	
+
 
     /**
      * Get user by email and password
@@ -65,8 +66,12 @@ class DB_Functions {
             $hash = $this->checkhashSSHA($salt, $password);
             // check for password equality
             if ($encrypted_password == $hash) {
-                // user authentication details are correct
-                return $user;
+                //cek pass
+				if ($user['userStatus']=="Y"){
+				 // cek status
+				return $user;
+				}
+               
             }
         } else {
             return NULL;
@@ -121,6 +126,27 @@ class DB_Functions {
 
         return $hash;
     }
+	
+	function send_mail($email,$message,$subject)
+	{
+		require_once('mailer/class.phpmailer.php');
+		$mail = new PHPMailer();
+		$mail->IsSMTP();
+		$mail->SMTPDebug  = 0;
+		$mail->SMTPAuth   = true;
+		$mail->SMTPSecure = "ssl";
+		$mail->Host       = "smtp.zoho.com";
+		$mail->Port       = 465;
+		$mail->AddAddress($email);
+		$mail->Username="Supportjavice@zoho.com";
+		$mail->Password="javice123";
+		$mail->SetFrom('Supportjavice@zoho.com','javice');
+		$mail->AddReplyTo("Supportjavice@zoho.com","javice");
+		$mail->Subject    = $subject;
+		$mail->MsgHTML($message);
+		$mail->Send();
+	}
+	
 
 }
 
