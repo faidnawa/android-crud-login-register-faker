@@ -306,4 +306,33 @@ private void callVolley(int page){
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void onBackPressed() {
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(MainActivity.this);
+        builder1.setMessage("Apakah kamu ingin Keluar aplikasi.");
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                "Ya",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        finish();
+                        System.exit(0);
+                    }
+                });
+
+        builder1.setNegativeButton(
+                "Tidak",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                        dialog.cancel();
+
+                    }
+                });
+
+        AlertDialog alert11= builder1.create();
+        alert11.show();
+    }
 }
