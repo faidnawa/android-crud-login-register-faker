@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22 Apr 2017 pada 05.14
+-- Generation Time: 06 Mei 2017 pada 05.35
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `latihancrud`
+-- Database: `databaselatihancrud`
 --
 
 -- --------------------------------------------------------
@@ -88,9 +88,7 @@ INSERT INTO `tbl_mhas` (`id`, `nama`, `nim`) VALUES
 (61, 'Mr. Emerald Pacocha PhD', '4532415100377'),
 (62, 'Teresa Little', '2536188339672802'),
 (63, 'Brennan Bartell', '5536233341961299'),
-(64, 'Abraham Rohan', '2683567483201693'),
-(65, 'Prof. Hilton Champlin', '5282743183565095'),
-(66, 'Domenica Lockman DVM', '5459324442484126'),
+(64, 'Abraham', '2683567483201693'),
 (68, 'faid fahruddin nawa', '123'),
 (69, 'faidl tambah data', '123');
 
@@ -107,18 +105,10 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `encrypted_password` varchar(80) NOT NULL,
   `salt` varchar(10) NOT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL
+  `token` varchar(100) NOT NULL,
+  `userStatus` enum('Y','N') NOT NULL DEFAULT 'N',
+  `created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `users`
---
-
-INSERT INTO `users` (`id`, `unique_id`, `name`, `email`, `encrypted_password`, `salt`, `created_at`, `updated_at`) VALUES
-(7, '58e345f47b2ff9.13055546', 'mashudi', 'mas@mas.com', 'rcjOUpHNN000rS4TNLhYbj72QphlYTQ2ZWNlMDY5', 'ea46ece069', '2017-04-04 14:06:28', NULL),
-(37, '58fa652972cca3.71378141', 'faidl', 'faidnawa@gmail.com', 'GGRjyGtIkGIkahNvcDHVQ0h+sZoyYjViYjU0Mzky', '2b5bb54392', '2017-04-22 03:01:45', NULL),
-(38, '58fa77fbb5e8a2.51934318', 'faidl fahruddin nawa', 'faid@faid.com', 'YNg5La89mjYThZVe8ZUyMKCnordhNGVkNDljN2E1', 'a4ed49c7a5', '2017-04-22 04:22:03', NULL);
 
 --
 -- Indexes for dumped tables
@@ -151,7 +141,7 @@ ALTER TABLE `tbl_mhas`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
