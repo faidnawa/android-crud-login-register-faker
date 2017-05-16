@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "283867808702",
+    "firebase_url": "https://latihanandroidcrud.firebaseio.com",
+    "project_id": "latihanandroidcrud",
+    "storage_bucket": "latihanandroidcrud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283867808702:android:6bff2290aee144e2",
+        "android_client_info": {
+          "package_name": "tk.faidnawa.latihanandroidcrud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283867808702-q2f940nu023l80ug5b9qeneulrkmptu5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tk.faidnawa.latihanandroidcrud",
+            "certificate_hash": "70078c79a4585f979268526517fcfcbda7b86937"
+          }
+        },
+        {
+          "client_id": "283867808702-anip3hggvnq1qe6hbi7e4gn2n8vj77ve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeYbHWvdajXM5oW4p3ye9yTMdLR-zDQ6g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283867808702-anip3hggvnq1qe6hbi7e4gn2n8vj77ve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

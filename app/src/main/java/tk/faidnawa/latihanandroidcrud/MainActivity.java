@@ -88,12 +88,12 @@ public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefre
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setTitle("Latihan CRUD");
 
        // HomeFragment fragment = new HomeFragment();
        // FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         //fragmentTransaction.replace(R.id.framelayout, fragment);
         //fragmentTransaction.commit();
-
         // menghubungkan variablel pada layout dan pada java
         swipe   = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
         list    = (ListView) findViewById(R.id.list);
