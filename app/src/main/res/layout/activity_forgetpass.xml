@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/side_nav_barr"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:weightSum="1">
+
+    <EditText
+        android:id="@+id/emailfoegetpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_email"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/cengpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5a06911b"
+        android:text="cek"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_message"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_error"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ProgressBar
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:id="@+id/progress"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true" />
+
+</LinearLayout>
