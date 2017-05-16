@@ -8,19 +8,35 @@
     android:padding="25dp"
     android:weightSum="1">
 
-    <EditText
-        android:id="@+id/emailfoegetpass"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_email"
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Form Reset Password"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/emailfoegetpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_email"
+            android:hint="Masukkan Email"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/cengpass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#5a06911b"
-        android:text="cek"
+        android:text="Cek Email"
         android:textColor="@color/white"
         />
 
