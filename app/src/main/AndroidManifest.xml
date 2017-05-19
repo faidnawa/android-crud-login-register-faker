@@ -31,7 +31,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Login2Activity" />
-        <activity android:name=".forgetpass"></activity>
+        <activity android:name=".forgetpass" />
+        <activity android:name=".About" />
+        <activity android:name=".Chet"></activity>
     </application>
 
 </manifest>

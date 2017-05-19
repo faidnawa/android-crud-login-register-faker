@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
@@ -49,7 +50,7 @@ import tk.faidnawa.latihanandroidcrud.until.Server;
 
 import static android.R.attr.fragment;
 
-public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefreshListener,NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener,NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar;
     FloatingActionButton fab;
@@ -173,9 +174,7 @@ public class MainActivity extends Activity implements SwipeRefreshLayout.OnRefre
 
     }
 
-    private void setSupportActionBar(Toolbar toolbar) {
 
-    }
 
     @Override
     public void onRefresh() {
@@ -335,4 +334,5 @@ private void callVolley(int page){
         AlertDialog alert11= builder1.create();
         alert11.show();
     }
+
 }

@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
@@ -607,5 +608,29 @@ public class Crud extends AppCompatActivity implements SwipeRefreshLayout.OnRefr
     public void onBackPressed() {
         Toast.makeText(this,"kalo udah login ya  tinggal logout ", Toast.LENGTH_LONG).show();
 
+    }
+
+    public boolean  onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.crud, menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        //handle presses on the action bar items
+        switch (item.getItemId()) {
+
+            case R.id.action_about:
+                startActivity(new Intent(this, About.class));
+                return true;
+
+            case R.id.chatting:
+                startActivity(new Intent(this, Chet.class));
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
