@@ -1,7 +1,6 @@
 package tk.faidnawa.latihanandroidcrud;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
@@ -51,9 +50,7 @@ import tk.faidnawa.latihanandroidcrud.helper.SQLiteHandler;
 import tk.faidnawa.latihanandroidcrud.helper.SessionManager;
 import tk.faidnawa.latihanandroidcrud.until.Server;
 
-import static android.os.Build.VERSION_CODES.M;
 import static tk.faidnawa.latihanandroidcrud.MainActivity.TAG_NO;
-import static tk.faidnawa.latihanandroidcrud.R.id.email;
 
 public class Crud extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener
         ,NavigationView.OnNavigationItemSelectedListener {
@@ -278,8 +275,6 @@ public class Crud extends AppCompatActivity implements SwipeRefreshLayout.OnRefr
 
                                     item.setId(obj.getString(TAG_ID));
                                     item.setNama(obj.getString(TAG_NAMA));
-
-
                                     item.setnim(obj.getString(TAG_NIM));
 
                                     // adding news to news array
@@ -399,7 +394,7 @@ public class Crud extends AppCompatActivity implements SwipeRefreshLayout.OnRefr
                     if (success == 1) {
                         Log.d("Add/update", jObj.toString());
 
-                        callVolley(0);
+                        onRefresh();
                         kosong();
 
                         Toast.makeText(Crud.this, jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
@@ -516,7 +511,7 @@ public class Crud extends AppCompatActivity implements SwipeRefreshLayout.OnRefr
                     if (success == 1) {
                         Log.d("delete", jObj.toString());
 
-                        callVolley(0);
+                        onRefresh();
 
                         Toast.makeText(Crud.this, jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
 
@@ -627,7 +622,7 @@ public class Crud extends AppCompatActivity implements SwipeRefreshLayout.OnRefr
                 return true;
 
             case R.id.chatting:
-                startActivity(new Intent(this, Chet.class));
+                startActivity(new Intent(this, chet.class));
                 return true;
         }
 
