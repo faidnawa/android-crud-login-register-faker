@@ -32,8 +32,25 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Login2Activity" />
         <activity android:name=".forgetpass" />
-        <activity android:name=".About" />
-        <activity android:name=".Chet"></activity>
+        <activity
+            android:name=".About"
+            android:label="@string/title_activity_about"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".About"/>
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".About" />
+        <activity
+            android:name=".chet"
+            android:label="@string/title_activity_chet"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".chet">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".chet" />
+
+        </activity>
     </application>
 
 </manifest>
