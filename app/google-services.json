@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "283867808702",
-    "firebase_url": "https://latihanandroidcrud.firebaseio.com",
-    "project_id": "latihanandroidcrud",
-    "storage_bucket": "latihanandroidcrud.appspot.com"
+    "project_number": "152363086616",
+    "firebase_url": "https://androidchatapp-df759.firebaseio.com",
+    "project_id": "androidchatapp-df759",
+    "storage_bucket": "androidchatapp-df759.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:283867808702:android:6bff2290aee144e2",
+        "mobilesdk_app_id": "1:152363086616:android:e7ccd20ee7844ed1",
         "android_client_info": {
-          "package_name": "tk.faidnawa.latihanandroidcrud"
+          "package_name": "com.androidchatapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "283867808702-q2f940nu023l80ug5b9qeneulrkmptu5.apps.googleusercontent.com",
+          "client_id": "152363086616-rraj4qimc4hbnjhik06jv41p4203s3gl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "tk.faidnawa.latihanandroidcrud",
+            "package_name": "com.androidchatapp",
             "certificate_hash": "70078c79a4585f979268526517fcfcbda7b86937"
           }
         },
         {
-          "client_id": "283867808702-anip3hggvnq1qe6hbi7e4gn2n8vj77ve.apps.googleusercontent.com",
+          "client_id": "152363086616-qjem499q0kl3uqkl47ha94o6kvg1tkel.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDeYbHWvdajXM5oW4p3ye9yTMdLR-zDQ6g"
+          "current_key": "AIzaSyAdCbBMLe6TsGoqf8z0RMA6Q6O9Jzjm13I"
         }
       ],
       "services": {
@@ -40,7 +40,51 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "283867808702-anip3hggvnq1qe6hbi7e4gn2n8vj77ve.apps.googleusercontent.com",
+              "client_id": "152363086616-qjem499q0kl3uqkl47ha94o6kvg1tkel.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152363086616:android:6bff2290aee144e2",
+        "android_client_info": {
+          "package_name": "tk.faidnawa.latihanandroidcrud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152363086616-bg1eo4nb6vtaj66sosnqngi360jkfedh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tk.faidnawa.latihanandroidcrud",
+            "certificate_hash": "70078c79a4585f979268526517fcfcbda7b86937"
+          }
+        },
+        {
+          "client_id": "152363086616-qjem499q0kl3uqkl47ha94o6kvg1tkel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdCbBMLe6TsGoqf8z0RMA6Q6O9Jzjm13I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152363086616-qjem499q0kl3uqkl47ha94o6kvg1tkel.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
