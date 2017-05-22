@@ -121,6 +121,7 @@ public class Crud extends AppCompatActivity implements SwipeRefreshLayout.OnRefr
         em = (TextView)header.findViewById(R.id.emailuser);
         na.setText(namee);
         em.setText(emaill);
+        userDetail.username = user.get("name");
 
 
 
@@ -622,7 +623,7 @@ public class Crud extends AppCompatActivity implements SwipeRefreshLayout.OnRefr
                 return true;
 
             case R.id.chatting:
-                startActivity(new Intent(this, chet.class));
+                startActivity(new Intent(this, userchat.class));
                 return true;
         }
 
