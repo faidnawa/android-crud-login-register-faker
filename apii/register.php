@@ -14,48 +14,29 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-	$uuid = uniqid('', true);
-	$code = md5(uniqid(rand()));
 
     // check if user is already existed with the same email
     if ($db->isUserExisted($email)) {
         // user already existed
         $response["error"] = TRUE;
-        $response["error_msg"] = " silahkan cek email kamu dan login " . $email;
+        $response["error_msg"] = " Maad user sudah ada " . $email;
         echo json_encode($response);
     } else {
         // create a new user
-        $user = $db->storeUser($name, $email, $password, $uuid, $code);
+        $user = $db->storeUser($name, $email, $password);
         if ($user) {
             // user stored successfully
-			
             $response["error"] = FALSE;
             $response["uid"] = $user["unique_id"];
             $response["user"]["name"] = $user["name"];
             $response["user"]["email"] = $user["email"];
             $response["user"]["created_at"] = $user["created_at"];
+            $response["user"]["updated_at"] = $user["updated_at"];
             echo json_encode($response);
-			if ($response){
-				$message = "
-						Hello $name,
-						<br /><br />
-						Welcome to Javice!<br/>
-						email : $email <br>
-						password : $password
-						To complete your registration  please , just click following link<br/>
-						<br /><br />
-						<a href='http://latihanandroid2.000webhostapp.com/verify.php?code=$code'>Click HERE to Activate :)</a>
-						<br /><br />
-						Thanks,";
-
-			$subject = "Confirm Registration";
-				$db->send_mail($email,$message,$subject);
-			}
-			
         } else {
             // user failed to store
             $response["error"] = TRUE;
-            $response["error_msg"] = "terjadi erro periksa koneksi !";
+            $response["error_msg"] = "Unknown error occurred in registration!";
             echo json_encode($response);
         }
     }

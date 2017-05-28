@@ -22,6 +22,3 @@ $a= $_GET["code"];
 		{
 			echo "akun anda sudah aktif silahkan login";
 		}
-		
-
-

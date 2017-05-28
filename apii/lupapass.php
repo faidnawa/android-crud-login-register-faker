@@ -1,43 +1,48 @@
 <?php
 
-/**
- * @author Ravi Tamada
- * @link http://www.androidhive.info/2012/01/android-login-and-registration-with-php-mysql-and-sqlite/ Complete tutorial
- */
-
 require_once 'DB_Functions.php';
+include 'token.php';
+ $token = get_token(5);
+ // panjang 15 karakter
+ //echo get_token(5);
 $db = new DB_Functions();
 
 // json response array
 $response = array("error" => FALSE);
 
-if (isset($_POST['email']) && isset($_POST['password'])) {
+if (isset($_POST['email'])) {
 
     // receiving the post params
     $email = $_POST['email'];
-    $password = $_POST['password'];
-
     // get the user by email and password
-    $user = $db->getUserByEmailAndPassword($email, $password);
+    $user = $db->cekemail($email,$token);
 
     if ($user != false) {
         // use is found
         $response["error"] = FALSE;
-        $response["uid"] = $user["unique_id"];
-        $response["user"]["name"] = $user["name"];
         $response["user"]["email"] = $user["email"];
-        $response["user"]["created_at"] = $user["created_at"];
         echo json_encode($response);
+			if ($response){
+				$message = "
+						Hello $email,
+						<br /><br />
+						masukkan kode { $token } untu reset password  
+						<br /><br />
+						ingat jangan lupa lagi :D,";
+
+			$subject = "reset password";
+			$db->send_mail($email,$message,$subject);
+			}
     } else {
         // user is not found with the credentials
         $response["error"] = TRUE;
-        $response["error_msg"] = "Login gagal. Coba Lagi! , coba cek email anda untuk aktifasi";
+        $response["error_msg"] = "maaf email tidak di temukan ";
         echo json_encode($response);
     }
 } else {
     // required post params is missing
     $response["error"] = TRUE;
-    $response["error_msg"] = "Email atau password Salah!";
+    $response["error_msg"] = "Email Salah!";
     echo json_encode($response);
 }
 ?>
