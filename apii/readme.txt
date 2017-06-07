@@ -1,1 +1,1 @@
-nama faid
+nama faidl fahruddin nawa
